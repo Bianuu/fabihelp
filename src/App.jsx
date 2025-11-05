@@ -12,7 +12,7 @@ function App() {
     return (
         <div style={{textAlign: "center", marginTop: "100px"}}>
             <h1>FabiHelp 🚀</h1>
-            <button onClick={getMesaj}>Primește mesaj de la server</button>
+            <button onClick={getMesaj}>Primește mesaj de la serverrrrrrrrr</button>
             <p>{mesaj}</p>
         </div>
     );
