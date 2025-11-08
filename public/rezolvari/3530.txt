@@ -1,0 +1,17 @@
+int Max() {
+
+    int maxi(-1e9);
+
+    for (int i = 0; i < n; ++i)
+        maxi = max(maxi, t[i]);
+
+    return maxi;
+}
+int Cauta(int val) {
+
+    for (int i = 0; i < n; ++i)
+        if (t[i] == val)
+            return i;
+
+    return -1;
+}
