@@ -21,11 +21,11 @@ export default function Acasa() {
                 </p>
 
                 <motion.a
-                    href="/probleme"
+                    /// href="/probleme"
                     whileHover={{scale: 1.08}}
                     className="bg-indigo-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-indigo-700 transition"
                 >
-                    Începe aventura 👨‍💻
+                    Începe aventura personalizată 👨‍💻
                 </motion.a>
             </motion.section>
 
