@@ -15,18 +15,23 @@ export default function Acasa() {
                 <h1 className="text-5xl sm:text-6xl font-extrabold text-indigo-700 mb-6">
                     Bine ai venit pe <span className="text-indigo-500">FabiHelp</span> 🚀
                 </h1>
-                <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-10">
+                <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-10">f
                     Platformă educațională dedicată pasionaților de informatică — explorează
                     algoritmi, grafuri și programare dinamică explicate clar și interactiv.
                 </p>
 
                 <motion.a
-                    /// href="/probleme"
-                    whileHover={{scale: 1.08}}
-                    className="bg-indigo-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-indigo-700 transition"
+                    href="https://wa.me/40748585665"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.08 }}
+                    className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-indigo-700 transition text-center leading-snug"
                 >
-                    Începe aventura personalizată 👨‍💻
+                    Începe aventura personalizată,<br />
+                    contactează-mă în privat 👨‍💻
                 </motion.a>
+
+
             </motion.section>
 
             {/* Secțiune cu avantaje */}
