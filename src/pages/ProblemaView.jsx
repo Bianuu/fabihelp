@@ -79,10 +79,10 @@ export default function ProblemaView() {
                 className="mb-20"
             >
                 <a
-                    href="/probleme"
+                    href="/"
                     className="inline-block bg-indigo-600 text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-indigo-700 transition"
                 >
-                    ← Înapoi la probleme
+                    ← Înapoi la pagina Acasă
                 </a>
             </motion.div>
         </div>
