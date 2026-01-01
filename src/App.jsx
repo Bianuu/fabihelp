@@ -1,36 +1,72 @@
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Acasa from "./pages/Acasa";
-import Despre from "./pages/Despre";
-import Probleme from "./pages/Probleme";
-import Probleme9 from "./probleme/a9a"
-import Probleme10 from "./probleme/a10a"
-import Probleme11 from "./probleme/a11a"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Problems from "./pages/Problems";
+import Problem from "./pages/Problem";
 import Contact from "./pages/Contact";
-import ProblemaView from "./pages/ProblemaView.jsx";
+import NotFound from "./pages/NotFound";
 
+/**
+ * App component defines the application routes and wraps each page with
+ * a common Layout.  Undefined paths fall back to a NotFound page.  We
+ * use BrowserRouter for client‑side navigation.
+ */
 function App() {
-    return (
-        <Router>
-            <div className="flex flex-col min-h-screen w-full overflow-x-hidden bg-gray-50 text-gray-800">
-                <Navbar/>
-                <main className="flex-grow w-full px-4 py-10">
-                    <Routes>
-                        <Route path="/" element={<Acasa/>}/>
-                        <Route path="/despre" element={<Despre/>}/>
-                        <Route path="/probleme" element={<Probleme/>}/>
-                        <Route path="/probleme/a9a" element={<Probleme9/>}/>
-                        <Route path="/probleme/a10a" element={<Probleme10/>}/>
-                        <Route path="/probleme/a11a" element={<Probleme11/>}/>
-                        <Route path="/problema/:id" element={<ProblemaView/>}/>
-                        <Route path="/contact" element={<Contact/>}/>
-                    </Routes>
-                </main>
-                <Footer/>
-            </div>
-        </Router>
-    );
+  return (
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Layout>
+              <Home />
+            </Layout>
+          }
+        />
+        <Route
+          path="/despre"
+          element={
+            <Layout>
+              <About />
+            </Layout>
+          }
+        />
+        <Route
+          path="/probleme"
+          element={
+            <Layout>
+              <Problems />
+            </Layout>
+          }
+        />
+        <Route
+          path="/problema/:id"
+          element={
+            <Layout>
+              <Problem />
+            </Layout>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <Layout>
+              <Contact />
+            </Layout>
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <Layout>
+              <NotFound />
+            </Layout>
+          }
+        />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
