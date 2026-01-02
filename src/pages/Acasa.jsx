@@ -24,10 +24,10 @@ export default function Acasa() {
                     href="https://wa.me/40748585665"
                     target="_blank"
                     rel="noopener noreferrer"
-                    whileHover={{ scale: 1.08 }}
+                    whileHover={{scale: 1.08}}
                     className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-indigo-700 transition text-center leading-snug"
                 >
-                    Începe aventura personalizată,<br />
+                    Începe aventura personalizată,<br/>
                     contactează-mă în privat 👨‍💻
                 </motion.a>
 

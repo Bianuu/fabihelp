@@ -8,14 +8,14 @@ import Footer from "./Footer";
  * inside the Navbar component, which applies the appropriate classes to
  * the root html element.  See `Navbar.jsx` for details.
  */
-export default function Layout({ children }) {
-  return (
-    <div className="min-h-screen flex flex-col bg-white dark:bg-gray-950 transition-colors duration-300">
-      <Navbar />
-      <main className="flex-1 w-full px-4 sm:px-8 pt-20 pb-10">
-        {children}
-      </main>
-      <Footer />
-    </div>
-  );
+export default function Layout({children}) {
+    return (
+        <div className="min-h-screen flex flex-col bg-white dark:bg-gray-950 transition-colors duration-300">
+            <Navbar/>
+            <main className="flex-1 w-full px-4 sm:px-8 pt-20 pb-10">
+                {children}
+            </main>
+            <Footer/>
+        </div>
+    );
 }

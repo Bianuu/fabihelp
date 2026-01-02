@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -13,60 +13,60 @@ import NotFound from "./pages/NotFound";
  * use BrowserRouter for client‑side navigation.
  */
 function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Layout>
-              <Home />
-            </Layout>
-          }
-        />
-        <Route
-          path="/despre"
-          element={
-            <Layout>
-              <About />
-            </Layout>
-          }
-        />
-        <Route
-          path="/probleme"
-          element={
-            <Layout>
-              <Problems />
-            </Layout>
-          }
-        />
-        <Route
-          path="/problema/:id"
-          element={
-            <Layout>
-              <Problem />
-            </Layout>
-          }
-        />
-        <Route
-          path="/contact"
-          element={
-            <Layout>
-              <Contact />
-            </Layout>
-          }
-        />
-        <Route
-          path="*"
-          element={
-            <Layout>
-              <NotFound />
-            </Layout>
-          }
-        />
-      </Routes>
-    </Router>
-  );
+    return (
+        <Router>
+            <Routes>
+                <Route
+                    path="/"
+                    element={
+                        <Layout>
+                            <Home/>
+                        </Layout>
+                    }
+                />
+                <Route
+                    path="/despre"
+                    element={
+                        <Layout>
+                            <About/>
+                        </Layout>
+                    }
+                />
+                <Route
+                    path="/probleme"
+                    element={
+                        <Layout>
+                            <Problems/>
+                        </Layout>
+                    }
+                />
+                <Route
+                    path="/problema/:id"
+                    element={
+                        <Layout>
+                            <Problem/>
+                        </Layout>
+                    }
+                />
+                <Route
+                    path="/contact"
+                    element={
+                        <Layout>
+                            <Contact/>
+                        </Layout>
+                    }
+                />
+                <Route
+                    path="*"
+                    element={
+                        <Layout>
+                            <NotFound/>
+                        </Layout>
+                    }
+                />
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;

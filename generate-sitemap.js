@@ -1,6 +1,6 @@
-import { SitemapStream, streamToPromise } from 'sitemap';
-import { createWriteStream, readdirSync, statSync } from 'fs';
-import { resolve, join } from 'path';
+import {SitemapStream, streamToPromise} from 'sitemap';
+import {createWriteStream, readdirSync, statSync} from 'fs';
+import {join, resolve} from 'path';
 
 // Domeniul principal al site-ului
 const baseUrl = 'https://fabihelp.vercel.app';
@@ -55,14 +55,14 @@ try {
 
 // 🔹 4. Rutele statice au o dată generică (azi)
 const today = new Date().toISOString().split('T')[0];
-const staticEntries = staticRoutes.map(url => ({ url, lastmod: today }));
+const staticEntries = staticRoutes.map(url => ({url, lastmod: today}));
 
 // 🔹 5. Combinăm toate
 const allRoutes = [...staticEntries, ...problemeRoutes, ...problemaRoutes];
 
 // 🔹 6. Generează sitemap
 async function generateSitemap() {
-    const sitemap = new SitemapStream({ hostname: baseUrl });
+    const sitemap = new SitemapStream({hostname: baseUrl});
     const writeStream = createWriteStream(resolve('./public/sitemap.xml'));
     sitemap.pipe(writeStream);
 
